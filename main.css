@@ -12,8 +12,8 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Neue Haas Unica W1G",  system-ui, "-apple-system" , "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "monigue", "raleway";
+  --default-font: "Neue Haas Unica W1G",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "monigue",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
 }
 
@@ -93,8 +93,8 @@ h6 {
 .header .logo h1 {
   font-size: 30px;
   margin: 0;
-  font-weight: 400;
-  color: var(--nav-dropdown-color);
+  font-weight: 700;
+  color: var(--heading-color);
 }
 
 .header .btn-getstarted,
@@ -138,13 +138,13 @@ h6 {
 /* Index Page Header
 ------------------------------*/
 .index-page .header {
-  --background-color:  #16783D;
+  --background-color: rgba(255, 255, 255, 0);
 }
 
 /* Index Page Header on Scroll
 ------------------------------*/
 .index-page.scrolled .header {
-  --background-color: #16783D;
+  --background-color: #ffffff;
 }
 
 /*--------------------------------------------------------------
@@ -170,7 +170,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color:  #fff7d8;
+    color: var(--nav-color);
     padding: 18px 12px;
     font-size: 15px;
     font-family: var(--nav-font);
@@ -197,7 +197,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: #FFCC33;
+    color: var(--nav-hover-color);
   }
 
   .navmenu .dropdown ul {
@@ -799,7 +799,7 @@ section,
 .section-title p {
   color: var(--heading-color);
   margin: 10px 0 0 0;
-  font-size: 64px;
+  font-size: 32px;
   font-weight: 400;
   font-family: var(--heading-font);
 }
@@ -817,9 +817,9 @@ section,
   position: relative;
   padding: 80px 0 60px 0;
   display: flex;
-  align-items:center;
+  align-items: center;
   background: url(../img/hero-bg.png) top center no-repeat;
-  background-size:contain;
+  background-size: cover;
 }
 
 .hero h1 {
@@ -951,7 +951,6 @@ section,
   border-radius: 4px;
   transition: 0.5s;
   box-shadow: 0px 5px 25px color-mix(in srgb, var(--accent-color), transparent 90%);
-  border-radius: 90px;
 }
 
 .about .content .btn-read-more span {
@@ -971,18 +970,14 @@ section,
   transform: translateX(5px);
 }
 
-
 /*--------------------------------------------------------------
 # Values Section
 --------------------------------------------------------------*/
-.values{
-  background-image: url("../img/fondo\ values.png"); 
-  background-size: cover; 
-  background-position: center;
-}
 .values .card {
-  background-color: transparent;
-  padding: 30px; 
+  background-color: var(--background-color);
+  color: var(--default-color);
+  padding: 30px;
+  box-shadow: 0px 0 10px color-mix(in srgb, var(--default-color), transparent 92%);
   text-align: center;
   transition: 0.3s;
   height: 100%;
@@ -990,36 +985,28 @@ section,
 }
 
 .values .card img {
-  padding: 0px 0px;
+  padding: 30px 50px;
   transition: 0.5s;
   transform: scale(1.1);
-  border-top-left-radius: 90px;
 }
 
 .values .card h3 {
-  font-size: 48px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 700;
   margin-bottom: 18px;
-  padding: 30px 0px 0px 0px;
 }
 
 .values .card:hover {
-  box-shadow: 0px 0 30px 
+  box-shadow: 0px 0 30px color-mix(in srgb, var(--default-color), transparent 88%);
 }
 
 .values .card:hover img {
   transform: scale(1);
 }
 
-
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
-.stats{
-  background-color: #16783D;
-  background-size: cover; 
-  background-position: center;
-}
 .stats .stats-item {
   box-shadow: 0px 0 30px color-mix(in srgb, var(--default-color), transparent 92%);
   padding: 30px;
@@ -1077,11 +1064,6 @@ section,
   background: var(--accent-color);
   color: var(--contrast-color);
 }
-.features{
-  background-image: url("../img/fondofeatures.png"); 
-  background-size: cover; 
-  background-position: center;
-}
 
 /*--------------------------------------------------------------
 # Alt Features Section
@@ -1091,8 +1073,8 @@ section,
 }
 
 .alt-features .icon-box h4 {
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 700;
   margin: 0 0 10px 0;
 }
 
@@ -1392,8 +1374,6 @@ section,
   cursor: pointer;
   display: flex;
   align-items: center;
-  border-radius: 0px 30px 0px 0px;
-  background: #FC3;
 }
 
 .faq .faq-container .faq-item h3 .num {
